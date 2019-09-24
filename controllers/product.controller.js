@@ -45,6 +45,7 @@ exports.product_delete=  (req,res) => {
 	})
 }
 
+//Update Record
 exports.update_product = (req,res)=>{
 
 	Product.findByIdAndUpdate(req.params.id, req.body.updateData,{ new :true}, (err,product)=>{
@@ -59,6 +60,7 @@ exports.update_product = (req,res)=>{
 	})
 }
 
+//Get record by id
 exports.get_product_by_id = (req,res)=>{	 
 	Product.findById(req.params.id, (err,product)=>{
 		if(err){
